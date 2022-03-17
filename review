@@ -1,1 +1,29 @@
 
+import xmltodict
+
+def my_xml_reader():
+    with open ('items.xml','r',encoding='UTF-8') as f:
+        
+        mydata=xmltodict.parse(f.read())
+        details_data=mydata['product']['definitions']['detailsData']
+        for data in details_data:
+            my_cedi=data['cedi']
+            my_child_Weigt_form=data['childWeightform']
+            my_child_Weight_to=data['childWeightTo']
+            my_color_code=['color_code']
+            my_color_description=['color_description']
+            my_countryImages=['countryImages']
+            my_defaultSku=['defaultSku']
+            my_preferredEan=['preferredEan']
+            my_sapAssortmentLevel=['sapAssortmentLevel']
+            my_sapPrice=['sapPrice']
+            my_season=['season']
+            my_showOnLineSku=['showOnLineSku']
+            my_size_code=['size_code']
+            my_size_description=['size_description']
+            my_skuID=['skuID']
+            my_skuName=['skuName']
+            my_stateOfArticle=['stateOfArticle']
+            my_umSAPprice=['umSAPprice']
+            my_volume=['volume']
+            my_weight=['weight']
